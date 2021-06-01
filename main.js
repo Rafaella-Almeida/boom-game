@@ -2,6 +2,22 @@
 // [FEITO] adicionar o balão no container
 // [FEITO] determinar um intervalo de tempo para adicionar os baloes sequencialmente
 
+// BOTÃO JOGAR
+const buttonIniciarJogo = document.querySelector(".button-iniciar-jogo");
+
+buttonIniciarJogo.addEventListener("click" ,()=>{
+  buttonIniciarJogo.remove();
+})
+
+// // INICIAR O JOGO
+
+// function iniciarJogo() {
+
+// }
+
+
+
+// BALÕES
 const containerBaloes = document.querySelector(".container-baloes");
 
 function adicionarBalao() {
