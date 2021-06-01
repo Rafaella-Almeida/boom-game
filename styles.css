@@ -36,6 +36,25 @@ header {
   cursor: pointer;
   border: none;
   border-radius: 24px;
+  animation: animation-button 1s infinite;
+}
+
+@keyframes animation-button {
+  0% {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(238, 228, 213, 0.945);
+  }
+  50% {
+    width: 220px;
+    height: 55px;
+    background-color: rgb(238, 238, 73);
+  }
+  100% {
+    width: 200px;
+    height: 50px;
+    background-color: aquamarine;
+  }
 }
 
 .container-baloes {

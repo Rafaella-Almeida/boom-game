@@ -7,6 +7,7 @@ const buttonIniciarJogo = document.querySelector(".button-iniciar-jogo");
 
 buttonIniciarJogo.addEventListener("click" ,()=>{
   buttonIniciarJogo.remove();
+  setInterval(adicionarBalao, 3000); //3000 milesegundos = 3 segundos
 })
 
 // // INICIAR O JOGO
@@ -44,6 +45,5 @@ function adicionarBalao() {
     })
 }
 
-setInterval(adicionarBalao, 3000); //3000 milesegundos = 3 segundos
 
 // adicionarBalao();
