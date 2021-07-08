@@ -5,26 +5,19 @@
 // BOTÃO JOGAR
 const buttonIniciarJogo = document.querySelector(".button-iniciar-jogo");
 
-buttonIniciarJogo.addEventListener("click" ,()=>{
+buttonIniciarJogo.addEventListener("click", () => {
   buttonIniciarJogo.remove();
-  setInterval(adicionarBalao, 3000); //3000 milesegundos = 3 segundos
-})
-
-// // INICIAR O JOGO
-
-// function iniciarJogo() {
-
-// }
-
-
+  setInterval(adicionarBalao, 2000); //2000 milesegundos = 2 segundos
+});
+let pontução = 0;
 
 // BALÕES
 const containerBaloes = document.querySelector(".container-baloes");
-
 function adicionarBalao() {
   const elementoImg = document.createElement("img");
 
-  elementoImg.setAttribute("src", "./assets/baloon.png");
+  elementoImg.setAttribute("src", "./assets/balao.png");
+
   elementoImg.setAttribute("class", "balao");
 
   const valorLeft = Math.round(Math.random() * 90);
@@ -40,10 +33,13 @@ function adicionarBalao() {
 
   console.log("Elemento Img =>", elementoImg);
 
-  elementoImg.addEventListener("click",()=>{
-    elementoImg.remove()
-    })
-}
+  elementoImg.addEventListener("click", () => {
+    elementoImg.remove();
 
+    pontuacao = pontuacao + 1;
+    elementPontuacao.textContent = pontuação;
+  });
+}
+function removerBalao(element) {}
 
 // adicionarBalao();

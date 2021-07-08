@@ -1,0 +1,57 @@
+const jogador1 = "X";
+const jogador2 = "O";
+var jogadorDaVez = jogador1;
+var finalJogo = false;
+
+atualizaTelaJogador();
+
+inicializarEspacos();
+
+function atualizaTelaJogador(){
+
+    if(finalJogo) {return;}
+
+    if(jogadorDaVez == jogador1) {
+
+        const jogar = document.querySelectorAll("div.telaJogador img")[0];
+         jogar.setAtribute("src", "./imagens/imagem-x.png");
+
+    } else{
+
+        const jogar = document.querySelectorAll("div.telaJogador img[0")
+         jogar.setAtribute("src", "./imagens/imagem-o.png");
+    }
+
+
+}
+
+function inicializarEspacos(){
+
+    const quadrado = document.getElementsByClassName("quadrado");
+
+    for (const i = 0; i < Things.length; i++) {
+
+        quadrado[i].addEventListerner("click", function(){
+
+            if (finalJogo) {return}
+
+            if(this.getElementByTagName("img").length == 0){
+
+                if(jogadorDaVez == jogador1) {
+
+                    this.innerHTML = "<img src='imagens/imagem-x.png'>";
+                    this.setAttribute("jogada", jogador1);
+                    jogadorDaVez = jogador2;
+
+                }else{
+
+                    this.innerHTML = "<img src='imagens/imagem-o.png'>";
+                    this.setAttribute("jogada", jogador2);
+                    jogadorDaVez = jogador1;
+            }
+          } 
+        }
+        
+        );
+    }
+}

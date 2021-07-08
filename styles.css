@@ -23,7 +23,7 @@ header {
 .subtitle {
   font-family: system-ui;
   font-size: 34px;
-  color: aquamarine;
+  color: rgb(252, 99, 170);
 }
 
 .button-iniciar-jogo {
@@ -31,7 +31,7 @@ header {
   width: 200px;
   height: 50px;
   font-size: 18px;
-  background-color: aquamarine;
+  background-color: rgb(252, 99, 170);
   color: black;
   cursor: pointer;
   border: none;
@@ -42,18 +42,18 @@ header {
 @keyframes animation-button {
   0% {
     width: 200px;
-    height: 50px;
+    height: 55px;
     background-color: rgba(238, 228, 213, 0.945);
   }
   50% {
     width: 220px;
     height: 55px;
-    background-color: rgb(238, 238, 73);
+    background-color: rgba(253, 135, 190, 0.945);
   }
   100% {
     width: 200px;
-    height: 50px;
-    background-color: aquamarine;
+    height: 55px;
+    background-color: rgb(216, 219, 218);
   }
 }
 
